@@ -1,4 +1,4 @@
-class navire():
+class Navire():
     def __init__(self,nom,positions):
         # Attribut
         self.nom = nom
