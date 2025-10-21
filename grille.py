@@ -2,9 +2,17 @@ class Grille:
     def __init__(self,navires):
         self.navires = navires
         self.tirs = []
+        self.resultats_tirs={}
         self.colonnes = [chr(ord('A') + i) for i in range(10)]
         self.lignes = [str(i) for i in range(1, 11)]
     
+    
+    def enregistrer_tir(self, coord, touche):
+        """Mémorise le résultat d'un tir."""
+        self.tirs.append(coord)
+        self.resultats_tirs[coord] = touche
+        
+        
     def afficher(self):
         grille = [["0" for _ in range(10)] for _ in range(10)]
         
@@ -12,7 +20,7 @@ class Grille:
             col = self.colonnes.index(tir[0])
             row = self.lignes.index(tir[1:])
             
-            if any(n.navire_touche(tir) for n in self.navires):
+            if tir in self.resultats_tirs and self.resultats_tirs[tir]:
                 grille[row][col] = "X"
             else:
                 grille[row][col] = "~"
