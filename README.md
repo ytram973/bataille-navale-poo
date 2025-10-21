@@ -75,5 +75,3 @@ python bataille_navale.py
 
 #### La partie se termine quand tous les navires sont coulés 
 
-
----
