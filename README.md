@@ -11,7 +11,7 @@ Le joueur tire sur des coordonnées de la grille pour tenter de **toucher et cou
 
 ### 1. Cloner le projet
 ```bash
-git clone https://github.com/ton-compte/bataille-navale.git
+git clone https://github.com/ytram973/bataille-navale-poo.git
 cd bataille-navale
 
 ```
